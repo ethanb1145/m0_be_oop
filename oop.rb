@@ -3,6 +3,21 @@
 # it should have a color attribute, that is silver by default
 # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
 
+class Unicorn
+    attr_accessor :name, :color
+
+    def initialize(name, color = "silver")
+        @name = name
+        @color = color
+    end
+
+    def say
+        "*~* Hello hello *~*"
+    end
+
+end
+
+
 
 
 #  Write a class called Vampire
@@ -11,6 +26,25 @@
 #  it should have a thirsty attribute, that is true by default
 #  it should have a drink method. When called, the thirsty attribute changes to false
 
+class Vampire
+    attr_accessor :name, :pet, :thirsty
+
+    def initialize(name, pet = "bat", thirsty = true)
+        @name = name 
+        @pet = pet
+        @thirsty = thirsty
+    end
+
+    def drink 
+        @thirsty = false
+    end
+
+end
+
+
+
+
+
 
 #  Write a Dragon class
 #  it should have a dynamic name attribute (string)
@@ -18,6 +52,29 @@
 #  it should have a dynamic color attribute (string)
 #  it should have a is_hungry attribute that is true by default
 #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
+
+class Dragon
+    attr_accessor :name, :rider, :color, :hungry
+
+    def initialize(name, rider, color, hungry = true)
+        @name = name
+        @rider = rider
+        @color = color
+        @hungry = hungry
+    end
+
+    def eat(times_eaten)
+        if times_eaten >= 4
+            @hungry = false
+        else
+            @hungry = true
+        end
+    end
+
+end
+
+
+
 
 
 #  Write a Hobbit class
